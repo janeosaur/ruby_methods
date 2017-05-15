@@ -1,5 +1,12 @@
-def p_times statement, num
-  puts statement*num
+# collaborator: ulieJay
+
+# def p_times statement, num
+#   puts statement*num
+# end
+
+def p_times statement,num
+  num.times do |i|
+    puts statment
 end
 
 p_times('hello', 5)
