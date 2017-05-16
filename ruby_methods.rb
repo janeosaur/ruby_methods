@@ -55,6 +55,24 @@ end
 
 # mock_me
 
+def print_contacts hash
+  # takes in hash {name: phonenumber, name: phonenumber}
+  # puts name, phonenumber for each contact
+  hash.each do |name, phone|
+    puts name, phone
+  end
+  # puts names = hash.keys.to_s
+  # puts phone_number = hash.values.to_s
+  # names.each do |i|
+  #   "#{names}: #{phone_number}"
+  # end
+end
+
+# print_contacts ({"jane" => "1234", "julie" => "4321"})
+
+
+
+
 def multiply_by (number, array)
   #number and returns an array of numbers multiplied by that number.
   puts array.map! {|i| i * number}
@@ -65,6 +83,36 @@ end
 
 # multiply_by(2,[1,2,5])
 # puts multiply_by(-1, [0, 1, 10])
+
+
+def reverse_each array
+  # reverses the words in array
+  array.map do |word|
+    word.reverse! #reverse-str didn't work?? 
+  end
+  # array.each do |word|
+  #   word.reverse!
+  # end
+  array
+end
+
+puts reverse_each(['blue', 'whale'])
+
+def get_responses array
+  # array of string questions
+  # return array of responses from console input
+  array.map do |el|
+    puts el
+    gets.chomp
+  end
+
+  # array.each do |el|
+  #   input = gets.chomp
+  #   puts "#{el}: #{input}"
+  # end
+end
+
+puts get_responses(['how are you', 'what is today'])
 
 def factorial (number)
   # recursive
@@ -83,5 +131,5 @@ def is_palindrome? (number)
   num_to_string == num_to_string.reverse
 end
 
-puts is_palindrome?(24)
-puts is_palindrome?(424)
+# puts is_palindrome?(24)
+# puts is_palindrome?(424)
